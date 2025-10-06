@@ -1,18 +1,13 @@
 import numpy as np
-from my_python_package.operators import (
-    add,
-    multiply,
-    )
+import matplotlib.pyplot as plt
+from my_python_package.functions import *
+
 def main():
-    # test for scalars
-    print(f'add(1, 3): {add(1, 3)}')
-    print(f'multiply(2, 12.): {multiply(2, 12.)}')
-    # test for arrays
-    A = np.array([[1, 2, 3], [4, 5, 6]])
-    B = 2. * np.ones(A.shape)
-    print(f'A:\n{A}')
-    print(f'B:\n{B}')
-    print(f'add(A, B):\n{add(A, B)}')
-    print(f'multiply(A, B):\n{multiply(A, B)}')
+    x=np.linspace(0.0,0.31,100)
+    y=([])
+    for xi in x:
+        y.append(launch_angle_range(2,xi,0.04))
+    plt.plot(x,y)
+    plt.show()
 if __name__ == '__main__':
     main()
