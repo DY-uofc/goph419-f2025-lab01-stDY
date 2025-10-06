@@ -42,7 +42,7 @@ def sqrt(x:float,iteration:int=10)->float:
     """
     if x<0 or x>=2.75:
         print("Value out of range")
-        return 100
+        return -1000
     elif x<0.75: #for a=0.5
         a=0.5
         y=0.7071067811865476
